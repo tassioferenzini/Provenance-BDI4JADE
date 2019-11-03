@@ -6,8 +6,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.omg.CORBA.ACTIVITY_COMPLETED;
-
 import PROV.DM.*;
 
 /**

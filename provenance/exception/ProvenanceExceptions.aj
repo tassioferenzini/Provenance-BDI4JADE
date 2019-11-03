@@ -1,14 +1,15 @@
 package exception;
 
 import java.util.Date;
+
 import dao.ExceptionErrorDAO;
 import dao.ThrowableErrorDAO;
 import model.ExceptionError;
 import model.ThrowableError;
 
-public aspect Exceptions {
+public aspect ProvenanceExceptions {
 
-	before(Throwable t): handler(Exception+) && args(t) {
+	before(Throwable t): handler(Throwable+) && args(t) {
 		Date now = new Date();
 		ThrowableError tr = new ThrowableError();
 		tr.setThrowable(t.toString());

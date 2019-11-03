@@ -23,9 +23,7 @@
 package bdi4jade.examples.capabilities;
 
 import bdi4jade.annotation.GoalOwner;
-import bdi4jade.annotation.PartCapability;
 import bdi4jade.annotation.TransientBelief;
-import bdi4jade.core.Capability;
 import bdi4jade.goal.Goal;
 import bdi4jade.plan.DefaultPlan;
 import bdi4jade.plan.Plan;

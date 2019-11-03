@@ -17,9 +17,9 @@ public class ProvWasStartedByAAConverter {
 	public Map converterToMap(ProvWasStartedByAA Obj) {
 		Map mapObj = new HashMap();
 		mapObj.put("time", Obj.getTime());
-		mapObj.put("activity1", Obj.getActivity());
-		mapObj.put("activity2", Obj.getActivity1());
-		mapObj.put("entity", Obj.getEntity());
+		mapObj.put("activity1", Obj.getActivity().toString());
+		mapObj.put("activity2", Obj.getActivity1().toString());
+		mapObj.put("entity", Obj.getEntity().toString());
 		return mapObj;
 	}
 

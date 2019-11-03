@@ -14,8 +14,8 @@ public class ProvWasInformedByConverter {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public Map converterToMap(ProvWasInformedBy Obj) {
 		Map mapObj = new HashMap();
-		mapObj.put("activity1", Obj.getActivity());
-		mapObj.put("activity2", Obj.getActivity1());
+		mapObj.put("activity1", Obj.getActivity().toString());
+		mapObj.put("activity2", Obj.getActivity1().toString());
 		return mapObj;
 	}
 

@@ -15,8 +15,8 @@ public class ProvWasAssociatedWithConverter {
 	public Map converterToMap(ProvWasAssociatedWith Obj) {
 		Map mapObj = new HashMap();
 		mapObj.put("plan", Obj.getPlan());
-		mapObj.put("activity", Obj.getActivity());
-		mapObj.put("agent", Obj.getAgent());
+		mapObj.put("activity", Obj.getActivity().toString());
+		mapObj.put("agent", Obj.getAgent().toString());
 		return mapObj;
 	}
 

@@ -14,8 +14,8 @@ public class ProvWasAttributedToConverter {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public Map converterToMap(ProvWasAttributedTo Obj) {
 		Map mapObj = new HashMap();
-		mapObj.put("entity", Obj.getEntity());
-		mapObj.put("agent", Obj.getAgent());
+		mapObj.put("entity", Obj.getEntity().toString());
+		mapObj.put("agent", Obj.getAgent().toString());
 		return mapObj;
 	}
 

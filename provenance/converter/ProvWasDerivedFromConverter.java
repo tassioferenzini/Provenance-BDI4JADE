@@ -14,11 +14,11 @@ public class ProvWasDerivedFromConverter {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public Map converterToMap(ProvWasDerivedFrom Obj) {
 		Map mapObj = new HashMap();
-		mapObj.put("generation", Obj.getGeneration());
-		mapObj.put("usage", Obj.getUsage());
-		mapObj.put("activity", Obj.getActivity());
-		mapObj.put("generatedEntity", Obj.getGeneratedEntity());
-		mapObj.put("usedEntity", Obj.getUsedEntity());
+		mapObj.put("generation", Obj.getGeneration().toString());
+		mapObj.put("usage", Obj.getUsage().toString());
+		mapObj.put("activity", Obj.getActivity().toString());
+		mapObj.put("generatedEntity", Obj.getGeneratedEntity().toString());
+		mapObj.put("usedEntity", Obj.getUsedEntity().toString());
 		return mapObj;
 	}
 

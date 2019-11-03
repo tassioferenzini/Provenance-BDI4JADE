@@ -22,7 +22,6 @@ public class MongoConnection {
 	private MongoConnection() {
 	}
 
-	// garante sempre uma unica instancia
 	public static synchronized MongoConnection getInstance() {
 		if (uniqInstance == null) {
 			uniqInstance = new MongoConnection();
@@ -30,15 +29,13 @@ public class MongoConnection {
 		return uniqInstance;
 	}
 
-	// garante um unico objeto mongo
 	@SuppressWarnings("deprecation")
 	public DB getDB() {
 		if (mongo == null) {
 			try {
 				mongo = new Mongo(HOST, PORT);
 				db = mongo.getDB(DB_NAME);
-				// System.out.println("Mongo instance equals :> " +
-				// mongoInstance++);
+				// System.out.println("Mongo instance equals :> " + mongoInstance++);
 			} catch (Exception e) {
 				System.out.printf("Unexpected error", e);
 			}

@@ -82,10 +82,8 @@ public class BlocksWorldView extends JPanel implements BeliefListener {
 	private State generateStateText() {
 		State state = new State();
 
-		BeliefSet<String, On> onBelief = (BeliefSet<String, On>) beliefBase
-				.getBelief(BlocksWorldCapability.BELIEF_ON);
-		BeliefSet<String, Clear> clearBelief = (BeliefSet<String, Clear>) beliefBase
-				.getBelief(BlocksWorldCapability.BELIEF_CLEAR);
+		BeliefSet<String, On> onBelief = (BeliefSet<String, On>) beliefBase.getBelief(BlocksWorldCapability.BELIEF_ON);
+		BeliefSet<String, Clear> clearBelief = (BeliefSet<String, Clear>) beliefBase.getBelief(BlocksWorldCapability.BELIEF_CLEAR);
 
 		List<Thing> tops = new ArrayList<>(2);
 		for (On on : onBelief.getValue()) {
@@ -121,9 +119,9 @@ public class BlocksWorldView extends JPanel implements BeliefListener {
 		return state;
 	}
 
+	@SuppressWarnings("unchecked")
 	private Thing getNext(Thing thing) {
-		BeliefSet<String, On> onBelief = (BeliefSet<String, On>) beliefBase
-				.getBelief(BlocksWorldCapability.BELIEF_ON);
+		BeliefSet<String, On> onBelief = (BeliefSet<String, On>) beliefBase.getBelief(BlocksWorldCapability.BELIEF_ON);
 		for (On on : onBelief.getValue()) {
 			if (on.getThing1().equals(thing))
 				return on.getThing2();

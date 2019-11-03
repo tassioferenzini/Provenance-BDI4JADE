@@ -15,9 +15,9 @@ public class ProvActedOnBehalfOfConverter {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public Map converterToMap(ProvActedOnBehalfOf Obj) {
 		Map mapObj = new HashMap();
-		mapObj.put("Activity", Obj.getActivity());
-		mapObj.put("Agent1", Obj.getAgent());
-		mapObj.put("Agent2", Obj.getAgent1());
+		mapObj.put("Activity", Obj.getActivity().toString());
+		mapObj.put("Agent1", Obj.getAgent().toString());
+		mapObj.put("Agent2", Obj.getAgent1().toString());
 		return mapObj;
 	}
 

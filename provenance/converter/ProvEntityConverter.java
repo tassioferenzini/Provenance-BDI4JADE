@@ -14,7 +14,7 @@ public class ProvEntityConverter {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public Map converterToMap(ProvEntity Obj) {
 		Map mapObj = new HashMap();
-		mapObj.put("nameEntity", Obj.getNameEntity());
+		mapObj.put("nameEntity", Obj.getNameEntity().toString());
 		return mapObj;
 	}
 
