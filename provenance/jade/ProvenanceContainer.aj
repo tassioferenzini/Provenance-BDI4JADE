@@ -21,6 +21,7 @@ import jade.core.Profile;
 public aspect ProvenanceContainer {
 
 	private static ProvActivity act;
+	private static ProvActivity act2;
 	private static ProvEntity ent;
 	private static ProvWasInformedBy wib;
 	private static ProvWasStartedByAA wsbaa;
@@ -122,17 +123,17 @@ public aspect ProvenanceContainer {
 		act.setEndTime(endTime);
 		new Thread(t4).start();
 
-		act = new ProvActivity();
+		act2 = new ProvActivity();
 		Date startTime = new Date();
-		act.setStartTime(startTime);
-		act.setEndTime(endTime);
-		act.setNameActivity("System Finished");
+		act2.setStartTime(startTime);
+		act2.setEndTime(endTime);
+		act2.setNameActivity("System Finished");
 		new Thread(t4).start();
 
-		@SuppressWarnings("rawtypes")
-		Map keyValue = new HashMap();
-		keyValue.put("nameActivity", "Called by a terminating container.");
-		ProvActivity act2 = new ProvActivityDAO().findobj(keyValue);
+//		@SuppressWarnings("rawtypes")
+//		Map keyValue = new HashMap();
+//		keyValue.put("nameActivity", "Called by a terminating container.");
+//		ProvActivity act2 = new ProvActivityDAO().findobj(keyValue);
 
 		webaa = new ProvWasEndedByAA();
 		webaa.setActivity(act);
@@ -148,7 +149,7 @@ public aspect ProvenanceContainer {
 	private static Runnable t4 = new Runnable() {
 		public void run() {
 			try {
-				new ProvActivityDAO().save(act);
+				new ProvActivityDAO().save(act2);
 			} catch (Exception e) {
 			}
 

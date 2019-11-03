@@ -33,8 +33,8 @@ public aspect ProvenanceMessage {
 		agent.setNameAgent(arg1.getSender().getName());
 		
 		agent1 = new ProvAgent();
-		agent1.setTypeAgent(arg1.getAllReceiver().next().getClass().getSimpleName());
-		agent1.setNameAgent(arg1.getAllReceiver().next().toString());
+		agent1.setTypeAgent(arg1.getOntology());
+		agent1.setNameAgent(arg1.getConversationId());
 		
 		act = new ProvActedOnBehalfOf();
 		act.setActivity(activity);
